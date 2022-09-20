@@ -24,7 +24,7 @@ class Page:
             duration = soup.find("td", itemprop="duration").text
             description = soup.find("div", class_="b-post__description_text").text
             lst_of_data = [title_ua, title_en, imdb, country, duration, description]
-            df = pd.DataFrame([lst_of_data], columns=["title_ua", "title_en", "imdb", "country", "duration", "description"])
+            df = pd.DataFrame([lst_of_data], columns=["Title_ua", "Title_en", "IMDB", "Country", "Duration", "Description"])
             df.to_csv('data.csv')
         except Exception as ex:
             print(ex)
